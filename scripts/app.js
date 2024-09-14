@@ -1,7 +1,8 @@
 "use strict";
 
 const start = async () => {
-  document.querySelector(".footer > p:nth-child(1)").style.visibility = "hidden";
+  document.querySelector(".footer > p:nth-child(1)").style.visibility =
+    "hidden";
   let now = new Date();
   let algoValue = Number(document.querySelector(".algo-menu").value);
   let speedValue = Number(document.querySelector(".speed-menu").value);
@@ -21,10 +22,10 @@ const start = async () => {
   if (algoValue === 4) await algorithm.MergeSort();
   if (algoValue === 5) await algorithm.QuickSort();
   let now1 = new Date();
-  document.getElementById('Ttime').innerHTML = (now1 - now) / 1000;
+  document.getElementById("Ttime").innerHTML = (now1 - now) / 1000;
   // document.querySelector(".footer > p:nth-child(2)").style.visibility = "visible";
 };
-var i=0;
+var i = 0;
 let input;
 
 const RenderScreen = async () => {
@@ -34,7 +35,7 @@ const RenderScreen = async () => {
 
 const RenderInput = async () => {
   input = String(document.querySelector(".input").value);
-  console.log("input in app.js is ",input);
+  console.log("input in app.js is ", input);
   await RenderList();
 };
 
@@ -46,11 +47,11 @@ const RenderList = async () => {
   // i++;
   await clearScreen();
   //await RenderInput();
-  
+
   let list = await randomList(sizeValue);
   const arrayNode = document.querySelector(".array");
-  console.log("array Node in app.js is ",arrayNode);
-  console.log("list in app.js is ",list);
+  console.log("array Node in app.js is ", arrayNode);
+  console.log("list in app.js is ", list);
   for (const element of list) {
     const node = document.createElement("div");
     node.className = "cell";
@@ -84,8 +85,8 @@ const randomList = async (Length) => {
   let list = new Array();
   let lowerBound = 1;
   let upperBound = 100;
-  
-// here is where bakliwaal has taken input using a prompt : but we are not going to use it, we will use a input field : to take input from user.
+
+  // here is where bakliwaal has taken input using a prompt : but we are not going to use it, we will use a input field : to take input from user.
 
   if (input == "Y") {
     // for (let counter = 0; counter < Length; ++counter) {
@@ -95,15 +96,24 @@ const randomList = async (Length) => {
     let inpBox = document.querySelector(".inputBox");
     let inputReceived = inpBox.value;
 
-    console.log("input received is ",inputReceived);
+    console.log("input received is ", inputReceived);
 
-    list = inputReceived.split(',');
-    console.log("list in app.js is ",list);
-    console.log("Length in app.js is ",Length, " list.length is ",list.length);
+    list = inputReceived.split(",");
+    console.log("list in app.js is ", list);
+    console.log(
+      "Length in app.js is ",
+      Length,
+      " list.length is ",
+      list.length
+    );
     Length = list.length;
-    console.log("Length in app.js is ",Length, " list.length is ",list.length);
-  }
-  else{
+    console.log(
+      "Length in app.js is ",
+      Length,
+      " list.length is ",
+      list.length
+    );
+  } else {
     for (let counter = 0; counter < Length; ++counter) {
       let randomNumber = Math.floor(
         Math.random() * (upperBound - lowerBound + 1) + lowerBound
@@ -119,7 +129,6 @@ const randomList = async (Length) => {
   //   list.push(parseInt(randomNumber));
   // }
 
-  
   return list;
 };
 
