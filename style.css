@@ -5,6 +5,7 @@
   --primary-color: #101010;
   --secondary-color: #101010;
 }
+
 *{
   margin: 0;
   padding: 0;
@@ -181,9 +182,6 @@ footer {
 .inputBoxParent{
   margin-top: 20px;
 }
-
-
-
 
 .footerr{
   display:flex;
