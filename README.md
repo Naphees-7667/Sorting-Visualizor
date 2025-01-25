@@ -78,4 +78,4 @@ For any questions or feedback, please contact:
 
 - **Name:** Naphees Iqubal
 - **Email:** naphees6200@gmail.com
-- **GitHub:** [https://github.com/Naphees-7667](https://github.com/Naphees-7667)
+- **GitHub:** https://github.com/Naphees-7667
